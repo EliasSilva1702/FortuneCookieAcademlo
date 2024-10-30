@@ -14,7 +14,6 @@ function App() {
 
   const [phrases, setPhrases] = useState("");
 
-  // Función para agregar una nueva frase al estado
   const handleAddPhrase = (newPhrase) => {
     setPhrases((prevPhrases) => [...prevPhrases, newPhrase]);
   };
@@ -22,13 +21,11 @@ function App() {
 
   const [image, setImage] = useState(arrayImagenes[1]);
 
-  // Función para obtener una imagen aleatoria
   const getRandomImage = () => {
     const randomIndex = Math.floor(Math.random() * arrayImagenes.length);
     return arrayImagenes[randomIndex];
   };
 
-  // Cambiar imagen cuando se llama a este método
   const changeImage = () => {
     setImage(getRandomImage());
   };

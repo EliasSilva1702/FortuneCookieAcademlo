@@ -5,14 +5,13 @@ export const AddPhrase = ({ onAddPhrase }) => {
   const [newPhrase, setNewPhrase] = useState("");
   const [author, setAuthor] = useState("");
 
-  // Manejador de envío
   const handleSubmit = (e) => {
     e.preventDefault();
     if (newPhrase && author) {
       const phraseObject = { phrase: newPhrase, author };
-      onAddPhrase(phraseObject); // Llama a la función para agregar la frase
-      setNewPhrase(""); // Reinicia el campo de entrada de frase
-      setAuthor(""); // Reinicia el campo de entrada de autor
+      onAddPhrase(phraseObject); 
+      setNewPhrase(""); 
+      setAuthor(""); 
       toast.success("Frase agregada exitosamente"); // Mensaje de confirmación
     } else {
       toast.error("Por favor, rellene todos los campos"); // Mensaje de error
